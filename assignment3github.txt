@@ -1,0 +1,44 @@
+The one interesting repository that I found was on the New York Times GitHub account. The programming language is JavaScript, and it is designed to get around the paywall established by the Wall Street Journal and Financial Times.
+
+I find it useful because, well first of all I am cheap and I like to consume financial news, so any chance I can get to access financial news from free from trusted sources, I am willing to learn more information about it.
+
+Secondly, I am in the process of applying to internship positions with publications specializing in business news, so I need as much access as I can get to sites such as the Wall Street Journal and the Financial Times. This script allows me that without having to find login credentials.
+
+It appears straightforward. The intial portions describe the code and the version. 
+
+The latter half is the bulk of the code. It appears all it is meant to do is request permission from the website to gain acces to the articles from the different sites that are available. 
+
+The critical portion is the "permissions" and "webRequest". 
+
+The code is below:
+
+{
+  "name": "Make WSJ & NYT Great Again",
+  "version": "0.2",
+  "manifest_version": 2,
+  "description": "Get around the paywall for many WSJ, NYT & FT content",
+  "homepage_url": "http://blog.jinsongli.com",
+  "icons": {
+    "48": "icons/eric_cartman.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://*.wsj.com/*",
+    "http://*.wsj.com/*",
+    "https://*.wsj.net/*",
+    "https://*.ft.com/*",
+    "http://*.ft.com/*",
+    "https://*.nytimes.com/*",
+    "http://*.nytimes.com/*",
+    "https://*.nyt.com/*",
+    "http://*.nyt.com/*"
+  ]
+}
+
